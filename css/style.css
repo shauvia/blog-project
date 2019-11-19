@@ -1,113 +1,23 @@
-body{
-  width: auto;
-  background-color: rgb(255, 255, 241);
-  font-family: 'Advent Pro', sans-serif;
-}
-
-img{
-  width: 100%;
-}
-
-.section-two img{
+.section-two img {
   border-radius: 10%;
-  
 }
 
-.section-two img:hover{
+.section-two img:hover {
   cursor: pointer;
 }
 
-header{
-  font-family: 'Rock Salt', cursive;
-  font-size: 3.5em;
-  text-align: center;
-  margin: 7vh 0 7vh 0;
-}
-
-footer h1{
-  font-family: 'Rock Salt', cursive;
-  font-size: 2.5em;
-  text-align: center;
-  margin: 1.5em 0 1em 0;
-}
-
-footer p{
-  border-top: 1px solid rgba(75, 75, 3, 0.623);
-  padding-top: 1em;
-  width: 86%;
-  margin: 0 auto 1em auto; 
-}
-
-footer a:link{
-  text-decoration: none;
-  color: gray;
-}
-
-footer a:visited{
-  text-decoration: none;
-  color: gray;
-}
-
-h2{
+h2 {
   font-size: 2.5em;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.5em;
 }
 
-nav > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  text-transform: uppercase;
-  color: black;
-  font-size: 1.4em;
-}
-
-nav li:hover {
-  background-color: rgb(241, 241, 217); /*poziome elementy menu*/
-}
-
-nav li a:link{
-  text-decoration: none;
-  color: black;
-}
-
-nav li a:visited{
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content li{
-  padding: 0.2em 0 0.25em 0;
-  font-size: 0.8em;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  background-color:  rgb(241, 241, 217);;
-  width: 6em;
-  box-shadow: 0px 8px 16px 0px rgb(148, 148, 141);
-  z-index: 5;
-  padding: 0.25em;
-  
-}
-
-.dropdown:hover .dropdown-content { 
-  display: flex;
-} /*w dolnym menu wyświetla się flex dopiero po najechaniu an nie myszą*/
-
-.dropdown-content li:hover { /*pionowe rozwijane menu*/
-  background-color: #ddd;
-} 
-
 /* wszystko powyżej dropdown menu */
 
 /* wszystko poniżej to grid z recentely added recipies and kategorie z obrazkami */
 
-.section-one{
+.section-one {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -116,22 +26,25 @@ nav li a:visited{
     'pic1 pic2 pic3 pic4';
   column-gap: 1%;
   row-gap: 3vh;
-  margin: 6% 0 6% 0;
 }
 
-section.section-one > h2{
+section.section-one > h2 {
   grid-area: h2;
 }
-section.section-one :nth-child(2)  { /* spacja mówi, że 2 dziecko sekcji z klasą section-one*/
+
+section.section-one :nth-child(2) { /* spacja mówi, że 2 dziecko sekcji z klasą section-one */
   grid-area: pic1;
 }
-section.section-one :nth-child(3){
+
+section.section-one :nth-child(3) {
   grid-area: pic2;
 }
-section.section-one :nth-child(4){
+
+section.section-one :nth-child(4) {
   grid-area: pic3;
 }
-section.section-one :nth-child(5){
+
+section.section-one :nth-child(5) {
   grid-area: pic4;
 }
 
@@ -140,44 +53,45 @@ section.section-two {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
-  'pict1 pict2 pict3'
-  'pict4 pict5 pict6';
+    'pict1 pict2 pict3'
+    'pict4 pict5 pict6';
   column-gap: 2%;
   row-gap: 7vh;
   margin: 10% 7% 0% 7%;
 }
 
-section.section-two :nth-child(1){
+section.section-two :nth-child(1) {
   grid-area: pict1;
 }
 
-section.section-two :nth-child(2){
+section.section-two :nth-child(2) {
   grid-area: pict2;
 }
 
-section.section-two :nth-child(3){
+section.section-two :nth-child(3) {
   grid-area: pict3;
 }
-section.section-two :nth-child(4){
+
+section.section-two :nth-child(4) {
   grid-area: pict4;
 }
 
-section.section-two :nth-child(5){ 
+section.section-two :nth-child(5) {
   grid-area: pict5;
 }
 
-section.section-two :nth-child(6){
+section.section-two :nth-child(6) {
   grid-area: pict6;
 }
 
-.section-one figure{
+.section-one figure {
   position: relative;
 }
 
-.blog-card{
+.blog-card {
   background-color: rgba(255, 255, 125, 0.658);
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: auto;
   text-align: center;
@@ -186,7 +100,7 @@ section.section-two :nth-child(6){
   display: none;
 }
 
-.section-one figure:hover .blog-card{ 
+.section-one figure:hover .blog-card {
   display: block;
 }
 
@@ -195,33 +109,32 @@ section.section-two :nth-child(6){
   padding-right: 0.7em;
   font-size: 1.3em;
   font-weight: 300;
-
 }
 
-.date{
+.date {
   border-left: 1px solid black;
   padding-left: 1em;
   font-size: 1em;
   font-weight: 300;
 }
 
-.blog-card h3{
-  margin: 0.5em 0 0.5em 0; 
+.blog-card h3 {
+  margin: 0.5em 0 0.5em 0;
   font-size: 1.8em;
   font-weight: bold;
 }
 
-.blog-card p{
+.blog-card p {
   margin-bottom: 1em;
   font-size: 1em;
   font-weight: 500;
 }
 
-.section-two figure{
+.section-two figure {
   position: relative;
 }
 
-.section-two h3{
+.section-two h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -229,49 +142,30 @@ section.section-two :nth-child(6){
   background-color: rgb(247, 247, 206);
   width: 50%;
   height: auto;
-  border-radius: 0.7em; /* jak zrobić takie zaokrąglenie, ale nie pikselami?*/
+  border-radius: 0.7em; /* jak zrobić takie zaokrąglenie, ale nie pikselami? */
   font-size: 1.5em;
   font-weight: 60;
   text-align: center;
   padding: 0.25em;
 }
 
-.section-two h3:hover{
+.section-two h3:hover {
   cursor: pointer;
   background-color: rgb(199, 199, 136);
 }
 
-
 /* dla urządzenia mobilnego */
 
-@media(max-width:500px) {
-
-  nav > ul{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: static;
-    flex-direction: column;
-    box-shadow: none ;
-    width: 100%;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
-
-  .section-one{
+@media (max-width: 500px) {
+  .section-one {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
     grid-template-areas:
-    'h2'
-    'pic1'
-    'pic2'
-    'pic3'
-    'pic4';
+      'h2'
+      'pic1'
+      'pic2'
+      'pic3'
+      'pic4';
   }
 
   section.section-two {
@@ -279,21 +173,32 @@ section.section-two :nth-child(6){
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     grid-template-areas:
-    'pict1'
-    'pict2'
-    'pict3'
-    'pict4'
-    'pict5'
-    'pict6';
+      'pict1'
+      'pict2'
+      'pict3'
+      'pict4'
+      'pict5'
+      'pict6';
+  }
+}
+
+@media (max-width: 800px) and (min-width: 501px) {
+  .section-one {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      'h2 h2'
+      'pic1 pic2'
+      'pic3 pic4';
   }
 
-}  
-
-
-
-
-
-
-
-
-
+  section.section-two {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      'pict1 pict2'
+      'pict3 pict4'
+      'pict5 pict6';
+  }
+}

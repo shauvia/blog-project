@@ -1,115 +1,25 @@
-body{
-  width: auto;
-  background-color: rgb(255, 255, 241);
-  font-family: 'Advent Pro', sans-serif;
-}
-
-img{
-  width: 100%;
-}/*pewnie do zmiany, ale się zobaczy*/
-
-header{
-  font-family: 'Rock Salt', cursive;
-  font-size: 3.5em;
-  text-align: center;
-  margin: 7vh 0 7vh 0;
-}
-
-header a:link{
-  text-decoration: none;
-  color:black;
-}
-
-header a:visited{
+header a:link {
   text-decoration: none;
   color: black;
 }
 
-nav > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  text-transform: uppercase;
-  color: black;
-  font-size: 1.4em;
-}
-
-nav li:hover {
-  background-color: rgb(241, 241, 217); /*poziome elementy menu*/
-}
-
-nav li a:link{
+header a:visited {
   text-decoration: none;
   color: black;
 }
 
-nav li a:visited{
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content li{
-  padding: 0.2em 0 0.25em 0;
-  font-size: 0.8em;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  background-color:  rgb(241, 241, 217);;
-  min-width: 160px; /*przyjrzeć się tej wielkości, bo skopiowana*/
-  box-shadow: 0px 8px 16px 0px rgb(148, 148, 141);;
-  z-index: 5;
-  padding: 0.25em;
-  
-}
-
-.dropdown:hover .dropdown-content { 
-  display: flex;
-} /*w dolnym menu wyświetla się flex dopiero po najechaniu an nie myszą*/
-
-.dropdown-content li:hover { /*pionowe rozwijane menu*/
-  background-color: #ddd;
-} 
-
-footer h1{
-  font-family: 'Rock Salt', cursive;
-  font-size: 2.5em;
-  text-align: center;
-  margin: 1.5em 0 1em 0;
-} /*podlinkowac do str głównej w html*/
-
-footer p{
-  border-top: 1px solid rgba(160, 160, 108, 0.623);
-  padding-top: 1em;
-  width: 90%;
-  margin: 0 auto 1em auto;
-  color: rgba(75, 75, 3, 0.623);
-}
-
-footer a:link{
-  text-decoration: none;
-  color: gray;
-}
-
-footer a:visited{
-  text-decoration: none;
-  color: gray;
-}
-
-.banner{
+.banner {
   position: relative;
-  margin: 12vh 0 10vh 0; 
+  margin: 0 0 10vh 0;
 }
 
-.banner h2{
+.banner h2 {
   font-size: 5vw;
   text-transform: uppercase;
   position: absolute;
   text-align: center;
-  top: 50%; /*okresla pozycję bez transform*/
-  transform: translate(0, -50%); /*przesuwa o 50% swojej wysokości i szerokości, swojej pozycji w której byłoby normalnie bez transform */
+  top: 50%; /* okresla pozycję bez transform */
+  transform: translate(0, -50%); /* przesuwa o 50% swojej wysokości i szerokości, swojej pozycji w której byłoby normalnie bez transform */
   height: auto;
   width: 100%;
   color: rgb(255, 255, 241);
@@ -117,39 +27,34 @@ footer a:visited{
   font-weight: bold;
 }
 
-/* .main-picture{
-  position: relative;
-} */
-
-.main-picture img{
+.main-picture img {
   border-radius: 2.5em;
 }
 
-.article-grid p{
+.article-grid p {
   font-size: 1.5em;
   text-align: justify;
   padding-top: 3vh;
 }
 
-.article-grid h4{
+.article-grid h4 {
   font-size: 1.9em;
   margin-bottom: 5vh;
   font-weight: bold;
 }
 
-.article-grid ul{
+.article-grid ul {
   list-style-type: square;
   list-style-position: outside;
   font-size: 1.3em;
   text-align: justify;
-
 }
 
-.article-grid ul li{
+.article-grid ul li {
   padding: 0.5em;
 }
 
-.article-grid{
+.article-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -162,53 +67,53 @@ footer a:visited{
   margin: 0 auto 0 auto;
 }
 
-.article-grid :nth-child(1){
+.article-grid :nth-child(1) {
   grid-area: picture;
 }
-.article-grid :nth-child(2){
+
+.article-grid :nth-child(2) {
   grid-area: description;
 }
-.article-grid :nth-child(3){
+
+.article-grid :nth-child(3) {
   grid-area: ingrediens;
 }
-.article-grid :nth-child(4){
+
+.article-grid :nth-child(4) {
   grid-area: instructions;
 }
 
-.about-me img{
+.about-me img {
   height: 7em;
   width: 7em;
   border-radius: 5em;
 }
 
-.about-me{
+.about-me {
   display: flex;
   flex-direction: row;
-  width: 90%; 
+  width: 90%;
   margin: 4em auto 4em auto;
-} 
-
-#description{
-  margin-left: 1em;
 }
 
-#description h4{
+#description h4 {
   font-size: 2em;
   margin: 0 0 1em 0;
   color: rgb(114, 78, 31);
 }
 
-#description{
+#description {
   font-size: 1.1em;
   color: rgb(136, 100, 54);
+  margin-left: 1em;
 }
 
-.social-media img{
+.social-media img {
   height: 1em;
   width: 1em;
 }
 
-.social-media figure{
+.social-media figure {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -216,67 +121,23 @@ footer a:visited{
 
 /* mobil device */
 
-@media(max-width:500px){
-
-  nav > ul{
-    display: flex;
-    flex-direction: column;
-    margin-left: 1em;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: static;
-    flex-direction: column;
-    box-shadow: none ;
-    width: 100%;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
-
-  .article-grid{
+@media (max-width: 500px) {
+  .article-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
-    'picture'
-    'description'
-    'ingrediens'
-    'instructions';
+      'picture'
+      'description'
+      'ingrediens'
+      'instructions';
   }
 
-  .banner h2{
-    font-size: 2em;
+  .banner h2 {
     width: 100%;
     text-align: center;
-  }  
+  }
 
-  /* popracować nac wysokością banera, bo za mały!!! */
-}  
-
-/* .article-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas:
-    'picture description'
-    'ingrediens instructions';
-  column-gap: 3%;
-  row-gap: 5vh;
-  width: 90%;
-  margin: 0 auto 0 auto;
+  .article-grid li {
+    margin: 1em;
+  }
 }
-
-.article-grid :nth-child(1){
-  grid-area: picture;
-}
-.article-grid :nth-child(2){
-  grid-area: description;
-}
-.article-grid :nth-child(3){
-  grid-area: ingrediens;
-}
-.article-grid :nth-child(4){
-  grid-area: instructions;
-} */

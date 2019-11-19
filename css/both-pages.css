@@ -1,0 +1,116 @@
+body {
+  width: auto;
+  background-color: rgb(255, 255, 241);
+  font-family: 'Advent Pro', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3.5em;
+  text-align: center;
+  margin: 7vh 0 7vh 0;
+}
+
+footer h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 1.5em 0 1em 0;
+}
+
+footer p {
+  border-top: 1px solid rgba(75, 75, 3, 0.623);
+  padding-top: 1em;
+  width: 90%;
+  margin: 0 auto 1em auto;
+  color: rgba(75, 75, 3, 0.623);
+}
+
+footer a:link {
+  text-decoration: none;
+  color: gray;
+}
+
+footer a:visited {
+  text-decoration: none;
+  color: gray;
+}
+
+nav {
+  margin-bottom: 9vh;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.4em;
+}
+
+.dropdown-content li {
+  padding: 0.2em 0 0.25em 0;
+  font-size: 0.8em;
+}
+
+nav li:hover {
+  background-color: rgb(241, 241, 217); /* poziome elementy menu */
+}
+
+nav li a:link {
+  text-decoration: none;
+  color: black;
+}
+
+nav li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: rgb(241, 241, 217);
+  width: 6em;
+  box-shadow: 0 8px 16px 0 rgb(148, 148, 141);
+  z-index: 5;
+  padding: 0.25em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+} /* w dolnym menu wyświetla się flex dopiero po najechaniu an nie myszą */
+
+.dropdown-content li:hover { /* pionowe rozwijane menu */
+  background-color: #ddd;
+}
+
+@media (max-width: 500px) {
+  nav {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: static;
+    flex-direction: column;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+}
