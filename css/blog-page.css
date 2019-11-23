@@ -1,3 +1,6 @@
+@import url("reset.css");
+@import url("both-pages.css");
+
 header a:link {
   text-decoration: none;
   color: black;
